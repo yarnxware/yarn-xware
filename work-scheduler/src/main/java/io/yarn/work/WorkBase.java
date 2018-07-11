@@ -16,7 +16,7 @@
  */
 package io.yarn.work;
 
-import io.yarn.work.i18n.LocalStringsManager;
+import io.yarn.common.i18n.LocalStringsManager;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;

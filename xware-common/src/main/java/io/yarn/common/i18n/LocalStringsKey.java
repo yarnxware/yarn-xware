@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.yarn.work.i18n;
+package io.yarn.common.i18n;
 
 import java.util.Locale;
 import java.util.Objects;

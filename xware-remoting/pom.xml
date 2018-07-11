@@ -21,32 +21,20 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.yarn</groupId>
-  <artifactId>yarn-xware</artifactId>
-  <packaging>pom</packaging>
+  <parent>
+      <groupId>io.yarn</groupId>
+      <artifactId>yarn-xware</artifactId>
+      <version>1.0.0</version>
+      <relativePath>../pom.xml</relativePath>
+  </parent>
 
-  <version>1.0.0</version>
+  <artifactId>xware-remoting</artifactId>
 
-  <name>Yarn Xware</name>
-  <description>Yarn Xware</description>
-  <url>https://github.com/hapinwater/yarn-xware</url>
-
-  <prerequisites>
-    <maven>3.2.5</maven>
-  </prerequisites>
-
+  <name>XWare Remoting</name>
+  <description>A xware remoting</description>
+  
   <properties>
+      <maven.compiler.source>1.7</maven.compiler.source>
+      <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
-
-  <modules>
-      <module>xware-common</module>
-      <module>work-scheduler</module>
-	  <module>xware-remoting</module>
-	  <!--
-	  <module>xware-config</module>
-	  <module>xware-command</module>
-	  <module>xware-nodeagent</module>
-	  -->
-  </modules>
-
 </project>

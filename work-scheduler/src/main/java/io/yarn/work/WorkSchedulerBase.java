@@ -35,7 +35,7 @@ public abstract class WorkSchedulerBase extends WorkBase implements WorkSchedule
     private static final long DEFAULT_CHECK_WORK_INTERVAL = 3000;
 
     protected final LinkedList<Work> workQueue = new LinkedList<Work>();
-
+    
     private boolean scheduleBySequence = true;
 
     private volatile boolean prohibitAddingWork = false;

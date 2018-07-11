@@ -18,7 +18,7 @@ package io.yarn.work;
 
 /**
  *
- * @author NortromYang
+ *
  */
 public class WorkThread implements Runnable {
 

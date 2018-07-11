@@ -32,11 +32,15 @@ public class ThreadPoolWorkScheduler extends WorkSchedulerBase {
 
     private int maxThread = 5;
 
+    private long idleTimeout = 120 * 1000;
+
+    private int maxWorkerSize = 4096;
+    
     private final ThreadFactory threadFactory;
 
     private Set<WorkThread> workThreads = new HashSet<WorkThread>();
 
-    private int waitThreads = 0;
+    private int waitingThreads = 0;
 
     private boolean scheduled = false;
 
@@ -56,6 +60,14 @@ public class ThreadPoolWorkScheduler extends WorkSchedulerBase {
         this.maxThread = maxThread;
     }
 
+    public long getIdleTimeout() {
+        return idleTimeout;
+    }
+
+    public void setIdleTimeout(long idleTimeout) {
+        this.idleTimeout = idleTimeout;
+    }
+
     public ThreadPoolWorkScheduler(String name) {
         super(name);
         threadFactory = new DefaultWorkThreadFactory();
@@ -71,7 +83,7 @@ public class ThreadPoolWorkScheduler extends WorkSchedulerBase {
         boolean added = super.addWork(work);
 
         if (scheduled) {
-            if (waitThreads < maxThread && workThreads.size() < maxThread) {
+            if (waitingThreads < maxThread && workThreads.size() < maxThread) {
                 WorkThread workThread = new WorkThread(this);
                 Thread realThread = threadFactory.newThread(workThread);
                 workThread.setThread(realThread);
