@@ -28,9 +28,9 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>work-scheduler</artifactId>
+    <artifactId>xware-scheduler</artifactId>
 
-    <name>Work Scheduler</name>
+    <name>Xware Work Scheduler</name>
     <description>A work scheduler</description>
   
     <properties>

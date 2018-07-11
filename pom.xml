@@ -40,7 +40,7 @@
 
   <modules>
       <module>xware-common</module>
-      <module>work-scheduler</module>
+      <module>xware-scheduler</module>
 	  <module>xware-remoting</module>
 	  <!--
 	  <module>xware-config</module>
