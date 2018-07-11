@@ -39,7 +39,7 @@ public class ServerConfig implements Serializable {
     private int soReceiveBuffer;
 
     private int soSendBuffer;
-    
+
     public String getHost() {
         return host;
     }

@@ -22,11 +22,21 @@ import java.nio.ByteBuffer;
  *
  *
  */
-public class Packet {
+public class ProtocolPacket {
+
+    private int id;
 
     private int length;
 
     private ByteBuffer[] dataBuffers;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public int getLength() {
         return length;

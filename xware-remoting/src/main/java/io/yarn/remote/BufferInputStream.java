@@ -84,4 +84,17 @@ public class BufferInputStream extends InputStream {
         return readCount;
     }
 
+    @Override
+    public int available() throws IOException {
+        int available = 0;
+        for (int i = bufferIndex; i < buffers.length; i++) {
+            ByteBuffer byteBuffer = buffers[i];
+            if (byteBuffer.hasRemaining()) {
+                available += byteBuffer.remaining();
+            }
+        }
+
+        return available;
+    }
+    
 }

@@ -16,12 +16,21 @@
  */
 package io.yarn.remote.protocol;
 
+import java.io.InputStream;
+
 /**
  *
  *
  */
 public class ProtocolParser {
-    
-    
-    
+
+    /**
+     * 
+     * @param in
+     * @return 
+     */
+    public ProtocolPacket parse(InputStream in) {
+        return null;
+    }
+
 }
