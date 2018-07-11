@@ -14,25 +14,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.yarn.work;
+package io.yarn.remote.protocol;
 
 /**
  *
  *
  */
-public class RunnableAdapterWork extends WorkBase {
-
-    private final Runnable target;
-
-    public RunnableAdapterWork(Runnable target) {
-        this.target = target;
-    }
-
-    @Override
-    public void doWork() {
-        if (target != null) {
-            target.run();
-        }
-    }
-
+public class ProtocolParser {
+    
+    
+    
 }

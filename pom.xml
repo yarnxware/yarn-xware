@@ -19,34 +19,34 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-  <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.yarn</groupId>
-  <artifactId>yarn-xware</artifactId>
-  <packaging>pom</packaging>
+    <groupId>io.yarn</groupId>
+    <artifactId>yarn-xware</artifactId>
+    <packaging>pom</packaging>
 
-  <version>1.0.0</version>
+    <version>1.0.0</version>
 
-  <name>Yarn Xware</name>
-  <description>Yarn Xware</description>
-  <url>https://github.com/hapinwater/yarn-xware</url>
+    <name>Yarn Xware</name>
+    <description>Yarn Xware</description>
+    <url>https://github.com/hapinwater/yarn-xware</url>
 
-  <prerequisites>
-    <maven>3.2.5</maven>
-  </prerequisites>
+    <prerequisites>
+        <maven>3.2.5</maven>
+    </prerequisites>
 
-  <properties>
-  </properties>
+    <properties>
+    </properties>
 
-  <modules>
-      <module>xware-common</module>
-      <module>xware-scheduler</module>
-	  <module>xware-remoting</module>
-	  <!--
-	  <module>xware-config</module>
-	  <module>xware-command</module>
-	  <module>xware-nodeagent</module>
-	  -->
-  </modules>
+    <modules>
+        <module>xware-common</module>
+        <module>xware-scheduler</module>
+        <module>xware-remoting</module>
+        <!--
+        <module>xware-config</module>
+        <module>xware-command</module>
+        <module>xware-nodeagent</module>
+        -->
+    </modules>
 
 </project>

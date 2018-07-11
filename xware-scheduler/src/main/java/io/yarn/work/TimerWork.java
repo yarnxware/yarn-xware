@@ -40,12 +40,7 @@ public class TimerWork extends WorkBase {
 
     private Runnable task;
 
-    public TimerWork(String name) {
-        super(name);
-    }
-
-    public TimerWork(String name, Runnable task) {
-        super(name);
+    public TimerWork(Runnable task) {
         this.task = task;
     }
 

@@ -19,22 +19,30 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-  <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-      <groupId>io.yarn</groupId>
-      <artifactId>yarn-xware</artifactId>
-      <version>1.0.0</version>
-      <relativePath>../pom.xml</relativePath>
-  </parent>
+    <parent>
+        <groupId>io.yarn</groupId>
+        <artifactId>yarn-xware</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
 
-  <artifactId>xware-remoting</artifactId>
+    <artifactId>xware-remoting</artifactId>
 
-  <name>XWare Remoting</name>
-  <description>A xware remoting</description>
+    <name>XWare Remoting</name>
+    <description>A xware remoting</description>
   
-  <properties>
-      <maven.compiler.source>1.7</maven.compiler.source>
-      <maven.compiler.target>1.7</maven.compiler.target>
-  </properties>
+    <properties>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.yarn</groupId>
+            <artifactId>xware-scheduler</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>

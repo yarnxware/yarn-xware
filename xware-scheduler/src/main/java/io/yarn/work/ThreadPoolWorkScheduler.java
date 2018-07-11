@@ -68,13 +68,11 @@ public class ThreadPoolWorkScheduler extends WorkSchedulerBase {
         this.idleTimeout = idleTimeout;
     }
 
-    public ThreadPoolWorkScheduler(String name) {
-        super(name);
+    public ThreadPoolWorkScheduler() {
         threadFactory = new DefaultWorkThreadFactory();
     }
 
     public ThreadPoolWorkScheduler(String name, ThreadFactory threadFactory) {
-        super(name);
         this.threadFactory = threadFactory;
     }
 

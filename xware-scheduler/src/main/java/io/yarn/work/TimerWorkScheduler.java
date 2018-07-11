@@ -22,8 +22,8 @@ package io.yarn.work;
  */
 public class TimerWorkScheduler extends ReactivableWorkScheduler implements WorkScheduler {
 
-    public TimerWorkScheduler(String name, WorkScheduler workScheduler) {
-        super(name, workScheduler);
+    public TimerWorkScheduler(WorkScheduler workScheduler) {
+        super(workScheduler);
         super.setScheduleBySequence(false);
     }
 

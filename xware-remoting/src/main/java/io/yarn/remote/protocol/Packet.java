@@ -14,25 +14,34 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.yarn.work;
+package io.yarn.remote.protocol;
+
+import java.nio.ByteBuffer;
 
 /**
  *
  *
  */
-public class RunnableAdapterWork extends WorkBase {
+public class Packet {
 
-    private final Runnable target;
+    private int length;
 
-    public RunnableAdapterWork(Runnable target) {
-        this.target = target;
+    private ByteBuffer[] dataBuffers;
+
+    public int getLength() {
+        return length;
     }
 
-    @Override
-    public void doWork() {
-        if (target != null) {
-            target.run();
-        }
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public ByteBuffer[] getDataBuffers() {
+        return dataBuffers;
+    }
+
+    public void setDataBuffers(ByteBuffer[] dataBuffers) {
+        this.dataBuffers = dataBuffers;
     }
 
 }

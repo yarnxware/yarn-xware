@@ -14,25 +14,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.yarn.work;
+package io.yarn.remote.server;
+
+import io.yarn.work.WorkBase;
 
 /**
  *
- *
+ * @author NortromYang
  */
-public class RunnableAdapterWork extends WorkBase {
+public class AcceptorWork extends WorkBase {
 
-    private final Runnable target;
-
-    public RunnableAdapterWork(Runnable target) {
-        this.target = target;
+    public AcceptorWork() {
     }
 
     @Override
     public void doWork() {
-        if (target != null) {
-            target.run();
-        }
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
 }

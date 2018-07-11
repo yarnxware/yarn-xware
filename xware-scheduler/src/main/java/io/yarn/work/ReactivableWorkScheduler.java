@@ -26,8 +26,7 @@ public class ReactivableWorkScheduler extends WorkSchedulerBase implements WorkS
     
     private boolean inScheduling = false;
 
-    public ReactivableWorkScheduler(String name, WorkScheduler workScheduler) {
-        super(name);
+    public ReactivableWorkScheduler(WorkScheduler workScheduler) {
         this.workScheduler = workScheduler;
         super.setScheduleOnlyOnce(false);
         super.setFinishAfterScheduling(false);

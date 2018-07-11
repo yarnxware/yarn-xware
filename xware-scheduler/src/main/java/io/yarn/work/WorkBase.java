@@ -32,7 +32,7 @@ public abstract class WorkBase implements Work {
 
     private static final LocalStringsManager strings = LocalStringsManager.getManager(WorkBase.class);
 
-    private final String name;
+    private String name;
 
     private volatile boolean cancelled = false;
 
@@ -69,13 +69,17 @@ public abstract class WorkBase implements Work {
      */
     private final Object waitFinishLock = new Object();
 
-    public WorkBase(String name) {
-        this.name = name;
-    }
-
     @Override
     public String getName() {
-        return name;
+        if (name != null) {
+            return name;
+        }
+
+        return this.getClass().getSimpleName() + "@" + this.hashCode();
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override

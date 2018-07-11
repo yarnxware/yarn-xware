@@ -32,7 +32,7 @@ public abstract class WorkSchedulerBase extends WorkBase implements WorkSchedule
     /**
      * Default 3 seconds.
      */
-    private static final long DEFAULT_CHECK_WORK_INTERVAL = 3000;
+    private static final long DEFAULT_CHECK_WORK_INTERVAL = 3 * 1000;
 
     protected final LinkedList<Work> workQueue = new LinkedList<Work>();
     
@@ -47,10 +47,6 @@ public abstract class WorkSchedulerBase extends WorkBase implements WorkSchedule
     private long checkWorkInterval = DEFAULT_CHECK_WORK_INTERVAL;
 
     private final Condition checkWorkReady = schedulerLock.newCondition();
-
-    public WorkSchedulerBase(String name) {
-        super(name);
-    }
 
     public boolean isScheduleBySequence() {
         return scheduleBySequence;
